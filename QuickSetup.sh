@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Clonar Repositorio
-git clone 
+#git clone https://github.com/RogueDXZ/Rogue-Termux/
 
 #Instalar desde repositorios de PKG
 pkg update
