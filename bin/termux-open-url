@@ -13,7 +13,7 @@ echo "7.-Descargar MP3"
 echo "*.-Salir"
 echo "========================="
 
-#Path donde se descargara el video (Hay que descomentar la linea y aadir '-P $path' al final de cada opcion)
+#Path donde se descargara el video
 path=$HOME
 
 read -p "Inserte la opcion: " opcion
