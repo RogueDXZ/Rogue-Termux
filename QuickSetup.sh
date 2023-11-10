@@ -25,5 +25,9 @@ chmod +x $HOME/Scripts/.*.sh
 #Hacer un "source" a .profile
 source $HOME/.profile
 
+#Instalar Lazymux
+cd $HOME
+git clone https://github.com/Gameye98/Lazymux
+
 #Eliminar archivo de Setup
 rm QuickSetup.sh
