@@ -18,7 +18,7 @@ alias la='ls -a'
 alias cmatrix='cmatrix -aC magenta'
 alias apt-upgrade='apt update -y ; apt upgrade -y'
 alias w='w3m google.com'
-alias anime-list='termux-open-url https://www3.animeflv.net/perfil/Rogue-kun/lista_espera'
+alias a-list='termux-open-url https://www3.animeflv.net/perfil/Rogue-kun/lista_espera'
 alias n='nnn'
 alias ts='termux-share'
 
