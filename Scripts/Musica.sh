@@ -13,14 +13,14 @@ MPV_PID=""
 while true; do
     # Verificar si se han conectado audfonos Bluetooth
     if termux-audio-info | grep -q '"BLUETOOTH_A2DP_IS_ON": true'; then
-        # Si los audfonos Bluetooth estn conectados y mpv no est reproduciendo msi>
+        # Si los audfonos Bluetooth estn conectados y mpv no est reproduciendo msica, iniciar la reproduccin de msica
         if [ -z "$MPV_PID" ]; then
             sleep 3
             mpv --no-video --shuffle --loop-playlist ~/storage/music/*.mp3 &
             MPV_PID=$!
         fi
     else
-        # Si los audfonos Bluetooth estn desconectados y mpv est reproduciendo msi>
+        # Si los audfonos Bluetooth estn desconectados y mpv est reproduciendo msica, detener la reproduccin de msica
         if [ -n "$MPV_PID" ]; then
             pkill mpv
             MPV_PID=""

@@ -13,13 +13,13 @@ echo "7.-Descargar MP3"
 echo "*.-Salir"
 echo "========================="
 
-#Path donde se descargara el video, esta configurado para descargarse donde se este ubicado, se puede cambiar al gusto
+#Path donde se descargara el video (por defecto en donde se esta ejecutando)
 path=$(pwd)
 
 read -p "Inserte la opcion: " opcion
 case $opcion in
 
-  1)
+    	1)
 		echo "Inserte el enlace del video o de la playlist: "
 		read link
 		yt-dlp -f 'bestvideo[height<=2160][ext=mp4]+bestaudio[ext=m4a]/best[height<=2160][ext=mp4]/best[ext=mp4]/best' -P $path --output "%(title)s.%(ext)s" $link 
@@ -52,7 +52,7 @@ case $opcion in
 	7)
 		echo "Inserte el enlace del video o de la playlist: "
 		read link
-		yt-dlp --embed-metadata --write-thumbnail --extract-audio --audio-format mp3 --audio-quality 0 -P $path --output "%(title)s.%(ext)s" $link 
+		yt-dlp --extract-audio --embed-metadata --embed-thumbnail --audio-format mp3 --audio-quality 0 -P $path --output "%(title)s.%(ext)s" $link 
 		;;
         *)
 		echo "Variable invalida"
