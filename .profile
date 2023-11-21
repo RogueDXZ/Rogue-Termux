@@ -3,6 +3,15 @@
 #Abrir profile y cargar los aliases en la sesion actual
 alias profile='nano ~/.profile ; source ~/.profile'
 
+#WOL PC
+alias pc='wol -v -h 192.168.0.255 18:C0:4D:69:27:CB'
+
+#Edicion de comandos diversos
+alias cp='cp -v'
+alias mv='mv -v'
+alias rm='rm -v'
+alias mkdir='mkdir -v'
+
 #Acortaciones
 alias cl='clear'
 alias la='ls -a'
@@ -24,3 +33,6 @@ alias r='~/Scripts/recordatorios.sh'
 alias ytd='~/Scripts/YT-Downloader.sh'
 alias sr='~/Scripts/.spyrecord.sh 1'
 alias sh='~/Scripts/SSH-Server.sh'
+
+#Matar procesos innecesarios
+pkill runsv
