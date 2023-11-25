@@ -13,10 +13,10 @@ cd $HOME
 #Clonar Repositorio
 git clone https://github.com/RogueDXZ/Rogue-Termux/
 
-#Mover elementos del git clone a el directorio $HOME y eliminar el directorio de Rogue-Termux
-mv Rogue-Termux/* $HOME
-mv Rogue-Termux/.* $HOME
-rm -r Rogue-Termux
+#Copiar elementos del git clone a el directorio $HOME
+cp Rogue-Termux/Scripts $HOME
+cp Rogue-Termux/bin $HOME
+cp Rogue-Termux/.profile $HOME
 
 #Hacer ejecutables todos los Scripts
 chmod +x $HOME/Scripts/*.sh
@@ -35,6 +35,3 @@ git clone https://github.com/khansaad1275/termux-helper/ && cd termux-helper && 
 
 #Instalar yt-dlp
 pip install yt-dlp
-
-#Eliminar archivo de Setup
-rm QuickSetup.sh
