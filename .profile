@@ -33,6 +33,3 @@ alias r='~/Scripts/recordatorios.sh'
 alias ytd='~/Scripts/YT-Downloader.sh'
 alias sr='~/Scripts/.spyrecord.sh 1'
 alias sh='~/Scripts/SSH-Server.sh'
-
-#Matar procesos innecesarios
-pkill runsv
