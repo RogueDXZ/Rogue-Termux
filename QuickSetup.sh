@@ -16,7 +16,7 @@ git clone https://github.com/RogueDXZ/Rogue-Termux/
 #Mover elementos del git clone a el directorio $HOME y eliminar el directorio de Rogue-Termux
 mv Rogue-Termux/* $HOME
 mv Rogue-Termux/.* $HOME
-rm Rogue-Termux
+rm -r Rogue-Termux
 
 #Hacer ejecutables todos los Scripts
 chmod +x $HOME/Scripts/*.sh
