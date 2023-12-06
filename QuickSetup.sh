@@ -31,7 +31,7 @@ cd $HOME
 git clone https://github.com/Gameye98/Lazymux
 
 #Instalar Termux Cheat List
-git clone https://github.com/khansaad1275/termux-helper/ && cd termux-helper && chmod +x termuxhelper.sh && bash install.sh
+pkg install git && cd $PREFIX && git clone https://github.com/khansaad1275/termux-helper/ && cd termux-helper && chmod +x termuxhelper.sh && bash install.sh
 
 #Instalar yt-dlp
 pip install yt-dlp
