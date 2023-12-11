@@ -40,6 +40,7 @@ echo "Ingrese el contenido del recordatorio: "
 read content
 
 echo "termux-notification -t '$title' -c '$content' --group '$title' --id '$title' --ongoing --priority max --button1 'Eliminar Recordatorio' --button1-action 'termux-notification-remove '$title''" >> ~/Scripts/cosasquehacer.sh
+chmod +x ~/Scripts/cosasquehacer.sh
 
 ;;
 
