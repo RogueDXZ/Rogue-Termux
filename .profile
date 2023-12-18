@@ -17,7 +17,7 @@ alias apt-upgrade='apt update -y ; apt upgrade -y'
 alias w='w3m google.com'
 alias a-list='termux-open-url https://www3.animeflv.net/perfil/Rogue-kun/lista_espera'
 alias n='nnn'
-alias ts='archivo=$(ls -p | grep -v / | fzf --reverse --header="Abrir Archivo:") && termux-share "$archivo"'
+alias ts='ls -p | grep -v / | termux-share "$(fzf --reverse --header="Abrir Archivo:")"'
 alias ti='termimage'
 
 #Redireccionamientos
