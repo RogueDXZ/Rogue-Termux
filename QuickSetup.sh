@@ -2,7 +2,7 @@
 
 #Instalar desde repositorios de PKG
 pkg update
-yes | pkg install htop neofetch termux-api openssh speedtest-go nmap ani-cli termimage git nnn man gh
+pkg install htop neofetch termux-api openssh speedtest-go nmap ani-cli termimage git nnn man gh
 
 #Instalar desde repositorios de APT
 apt update -y && apt upgrade -y && apt install python mpv w3m cmatrix tmate tmux sox wol -y
