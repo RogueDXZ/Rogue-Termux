@@ -3,6 +3,9 @@
 #Abrir profile y cargar los aliases en la sesion actual
 alias profile='nano ~/.profile ; source ~/.profile'
 
+#Actualizar Rogue-Termux github
+alias git-u='git add . && git commit -m "Cambios" && git push'
+
 #Edicion de comandos diversos
 alias cp='cp -v'
 alias mv='mv -v'
@@ -18,6 +21,7 @@ alias w='w3m google.com'
 alias a-list='termux-open-url https://www3.animeflv.net/perfil/Rogue-kun/lista_espera'
 alias n='nnn'
 alias ts='ls -p | grep -v / | termux-share "$(fzf --reverse --header="Abrir Archivo:")"'
+alias tsa='ls -a -p | grep -v / | termux-share "$(fzf --reverse --header="Abrir Archivo (Oculto):")"'
 alias ti='termimage'
 
 #Redireccionamientos
