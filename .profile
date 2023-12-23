@@ -1,7 +1,7 @@
 #Mis atajos
 
 #Abrir profile y cargar los aliases en la sesion actual
-alias profile='nano ~/.profile ; source ~/.profile'
+alias profile='nano ~/.profile ; source ~/.profile ; cp ~/.profile ~/.bashrc'
 
 #Actualizar Rogue-Termux github
 alias git-u='git add . && git commit -m "Cambios" && git push'
