@@ -1,11 +1,11 @@
 #!/bin/bash
 
-#Instalar desde repositorios de PKG
-pkg update
-pkg install htop neofetch termux-api openssh speedtest-go nmap ani-cli termimage git nnn man gh
+#Instalar desde repositorios de PKG (Preferible no usarlo para un setup automático)
+#pkg update
+#pkg install
 
 #Instalar desde repositorios de APT
-apt update -y && apt upgrade -y && apt install python mpv w3m cmatrix tmate tmux sox wol -y
+apt update -y && apt upgrade -y && apt install python mpv w3m cmatrix tmate tmux sox wol openssh termux-api neofetch htop speedtest-go nmap ani-cli termimage git nnn man gh tealdeer -y
 
 #Reposicionar en $HOME
 cd $HOME

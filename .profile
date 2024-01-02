@@ -9,7 +9,7 @@ alias mv='mv -v'
 alias rm='rm -v'
 alias mkdir='mkdir -v'
 alias fzf='fzf --reverse -e -i -m'
-alias play='ls -ap | grep -v / | play "$(fzf --reverse -e -i -m)"'
+alias play='ls -ap | grep -v / | play "$(fzf --reverse -e -i)"'
 
 #Acortaciones
 alias cl='clear'
