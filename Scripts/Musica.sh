@@ -1,9 +1,24 @@
-# Imprimir sobre el programa corriendo
-echo "=========================="
-echo "Musica automatica iniciada"
-echo "=========================="
+#!/bin/bash
 
-# Directorio de msica a reproducir
+opciones=("Playlist Random" "Playlist Random (Solo Bluetooth)")
+opcion=$(printf '%s\n' "${opciones[@]}" | fzf --reverse -e -i)
+
+case $opcion in
+
+"Playlist Random")
+echo "==============="
+echo "Música iniciada"
+echo "==============="
+	mpv --no-video --shuffle --loop-playlist ~/storage/music/*.mp3
+;;
+
+"Playlist Random (Solo Bluetooth)")
+# Imprimir sobre el programa corriendo
+echo "=================================="
+echo "Musica solo con bluetooth iniciada"
+echo "=================================="
+
+# Directorio de música a reproducir
 MUSIC_DIR="~/storage/music"
 
 # PID del proceso de mpv
@@ -27,3 +42,9 @@ while true; do
         fi
     fi
 done
+;;
+*)
+	echo "Variable invalida"
+	exit 1
+;;
+esac
