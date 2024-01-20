@@ -3,9 +3,10 @@
 clear
 echo "=================================================="
 echo "1.-Crear nuevo recordatorio"
-echo "2.-Crear lista de recordatorios"
-echo "3.-Ejecutar Lista"
-echo "4.-Eliminar Lista"
+echo "2.-Añadir un recordatorio a la lista"
+echo "3.-Eliminar un recordatorio de la lista"
+echo "4.-Ejecutar Lista"
+echo "5.-Eliminar Lista"
 echo "=================================================="
 
 read -p "Ingrese el numero de la opcion: " opcion
@@ -46,11 +47,18 @@ chmod +x ~/Scripts/cosasquehacer.sh
 
 3)
 
-bash ~/Scripts/cosasquehacer.sh
+linea=$(cat -n ~/Scripts/cosasquehacer.sh | fzf --reverse -e -i --prompt="¿Qué recordatorio quieres eliminar?: " | awk '{print $1}')
+sed -i "${linea}d" ~/Scripts/cosasquehacer.sh
 
 ;;
 
 4)
+
+bash ~/Scripts/cosasquehacer.sh
+
+;;
+
+5)
 
 rm ~/Scripts/cosasquehacer.sh
 
