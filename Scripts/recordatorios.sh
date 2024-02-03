@@ -47,8 +47,7 @@ chmod +x ~/Scripts/cosasquehacer.sh
 
 3)
 
-linea=$(cat -n ~/Scripts/cosasquehacer.sh | fzf --reverse -e -i --prompt="¿Qué recordatorio quieres eliminar?: " | awk '{print $1}')
-sed -i "${linea}d" ~/Scripts/cosasquehacer.sh
+linea=$(cat -n ~/Scripts/cosasquehacer.sh | fzf --reverse -e -i --prompt="¿Qué recordatorio quieres eliminar?: " | awk '{print $1}') && sed -i "${linea}d" ~/Scripts/cosasquehacer.sh
 
 ;;
 
