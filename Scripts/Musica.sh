@@ -1,7 +1,8 @@
 #!/bin/bash
 
-opciones=("Playlist Random" "Playlist Random (Solo Bluetooth)")
-opcion=$(printf '%s\n' "${opciones[@]}" | fzf --reverse -e -i)
+mdir="/data/data/com.termux/files/home/storage/music"
+opciones=("Playlist Random" "Playlist Random (Solo Bluetooth)" "Escoger canción a reproducir")
+opcion=$(printf '%s\n' "${opciones[@]}" | fzf --reverse -e -i --prompt="Elige una opción: ")
 
 case $opcion in
 
@@ -19,7 +20,7 @@ echo "Musica solo con bluetooth iniciada"
 echo "=================================="
 
 # Directorio de música a reproducir
-MUSIC_DIR="~/storage/music"
+MUSIC_DIR="~/storage/music/"
 
 # PID del proceso de mpv
 MPV_PID=""
@@ -42,6 +43,12 @@ while true; do
         fi
     fi
 done
+;;
+
+"Escoger canción a reproducir")
+	cd $mdir
+	ls | mpv --no-video "$(fzf --reverse -e -i --prompt='Escoge una canción: ')"
+	cd -
 ;;
 *)
 	echo "Variable invalida"
