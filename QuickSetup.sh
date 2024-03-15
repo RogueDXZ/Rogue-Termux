@@ -4,8 +4,8 @@
 #pkg update
 #pkg install
 
-#Instalar desde repositorios de APT
-apt update -y && apt upgrade -y && apt install python mpv w3m cmatrix tmate tmux sox wol openssh termux-api neofetch htop speedtest-go nmap ani-cli termimage git nnn man gh tealdeer -y
+#Instalar desde repositorios de APT (No se puede automatizar, rompe cosas)
+apt update -y && apt upgrade -y && apt install python mpv w3m cmatrix tmate tmux sox wol openssh termux-api neofetch htop speedtest-go nmap ani-cli termimage git nnn man gh tealdeer
 
 #Reposicionar en $HOME
 cd $HOME
