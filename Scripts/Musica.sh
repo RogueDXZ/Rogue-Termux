@@ -54,7 +54,9 @@ done
 "Servidor Música (Tizonia)")
 	termux-wifi-connectioninfo | grep "ip"
 	echo "port: 8010"
-	tizonia --server -s $mdir
+	cd $mdir
+	tizonia --server -s .
+	cd -
 ;;
 
 *)
