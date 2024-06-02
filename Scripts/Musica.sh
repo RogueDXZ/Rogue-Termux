@@ -1,7 +1,7 @@
 #!/bin/bash
 
 mdir="/data/data/com.termux/files/home/storage/music"
-opciones=("Playlist Random" "Playlist Random (Solo Bluetooth)" "Escoger canción a reproducir")
+opciones=("Playlist Random" "Playlist Random (Solo Bluetooth)" "Escoger canción a reproducir" "Servidor Música (Tizonia)")
 opcion=$(printf '%s\n' "${opciones[@]}" | fzf --reverse -e -i --prompt="Elige una opción: ")
 
 case $opcion in
@@ -50,6 +50,13 @@ done
 	ls | mpv --no-video "$(fzf --reverse -e -i --prompt='Escoge una canción: ')"
 	cd -
 ;;
+
+"Servidor Música (Tizonia)")
+	termux-wifi-connectioninfo | grep "ip"
+	echo "port: 8010"
+	tizonia --server -s $mdir
+;;
+
 *)
 	echo "Variable invalida"
 	exit 1
